@@ -1,0 +1,16 @@
+#restaurants
+{
+    width: auto;
+    height: 53.9%;
+    background-color: rgb(246, 246, 246);
+    padding: $lepad;
+    padding-bottom: 10%;
+    .restau
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height:100%;
+    }
+}

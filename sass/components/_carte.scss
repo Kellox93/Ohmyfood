@@ -1,0 +1,52 @@
+.carte
+{
+    width: 90%;
+    height: 220px;
+    position:relative;
+    margin: 10px;
+    box-shadow: $ombres;
+    border-radius: 20px;
+    background-color: white;
+    &:hover{box-shadow: $ombres-survol;}
+    img
+    {
+        width: 100%; 
+        height: 70%;
+        border-radius: 10px 10px 0px 0px;
+        object-fit: cover;
+        
+    }
+
+    .nouveau
+    {
+        width: 20%;
+        height: 15%;
+        position: absolute;
+        top: 5%;
+        right: 5%;
+        background-color: $couleur-vert;
+        color: #64a597;
+        font-size: 100%;
+        font-weight: 700;
+        border-radius: 4px;
+        @include centrer;
+
+    }
+    
+    a{color: black;}
+    .barre
+    {
+        display: flex;
+        background-color: white;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 30%;
+        border-radius: 0px 0px 10px 10px;
+        h2{margin: $mar-text; margin-left: $mar-text-left;font-size: medium;}
+        p{margin: $mar-text; margin-left: $mar-text-left;}
+    
+    }
+
+    
+}

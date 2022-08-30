@@ -1,0 +1,468 @@
+@font-face {
+  font-family: "sh";
+  src: url("polices/Shrikhand-Regular.otf");
+}
+@keyframes entrer_menu {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes coeur {
+  0% {
+    color: gainsboro;
+  }
+  100% {
+    color: rgb(147, 86, 220);
+  }
+}
+@keyframes progress {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes progresso {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 85%;
+  }
+}
+body {
+  width: auto;
+  height: auto;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin: 0px;
+}
+
+.boutonex {
+  color: white;
+  text-align: center;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 6%;
+  padding-bottom: 6%;
+  box-shadow: rgb(216, 216, 216) 0px 5px 5px;
+  font-weight: 500;
+  background: linear-gradient(to right bottom, rgb(255, 121, 218), rgb(147, 86, 220));
+  border-radius: 30px;
+  text-decoration: none;
+  cursor: pointer;
+  transform: scale(1);
+  transition-property: transform;
+  transition-duration: 500ms;
+}
+.boutonex:hover {
+  transform: scale(1.15);
+}
+
+.carte {
+  width: 90%;
+  height: 220px;
+  position: relative;
+  margin: 10px;
+  box-shadow: rgb(216, 216, 216) 0px 5px 5px;
+  border-radius: 20px;
+  background-color: white;
+}
+.carte:hover {
+  box-shadow: rgb(145, 145, 145) 0px 10px 10px;
+}
+.carte img {
+  width: 100%;
+  height: 70%;
+  border-radius: 10px 10px 0px 0px;
+  object-fit: cover;
+}
+.carte .nouveau {
+  width: 20%;
+  height: 15%;
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  background-color: #99E2D0;
+  color: #64a597;
+  font-size: 100%;
+  font-weight: 700;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.carte a {
+  color: black;
+}
+.carte .barre {
+  display: flex;
+  background-color: white;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 30%;
+  border-radius: 0px 0px 10px 10px;
+}
+.carte .barre h2 {
+  margin: 5px;
+  margin-left: 10px;
+  font-size: medium;
+}
+.carte .barre p {
+  margin: 5px;
+  margin-left: 10px;
+}
+
+ul {
+  padding-left: 5%;
+}
+ul li {
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+  width: 90%;
+  background-color: rgb(246, 246, 246);
+  margin: 5%;
+  list-style-position: outside;
+  box-shadow: rgb(216, 216, 216) 0px 5px 5px;
+  border-radius: 15px;
+  font-size: 100%;
+  text-decoration: none;
+  height: 63px;
+  font-weight: 600;
+  align-items: center;
+}
+ul li p {
+  background-color: rgb(147, 86, 220);
+  color: white;
+  width: 8%;
+  height: 33%;
+  border-radius: 20px;
+  text-align: center;
+  font-size: 70%;
+  font-weight: 400;
+  position: absolute;
+  left: -4%;
+  padding-top: 2%;
+}
+ul li:hover {
+  background-color: rgba(147, 86, 220, 0.2);
+  box-shadow: rgb(145, 145, 145) 0px 10px 10px;
+}
+ul li:hover .fa-solid {
+  color: rgb(147, 86, 220);
+}
+ul li .fa-solid {
+  margin: 5%;
+  margin-right: 10%;
+  margin-left: 10%;
+  color: #808080;
+}
+
+h1 {
+  align-items: center;
+  margin-left: 5%;
+}
+
+.commander {
+  margin: 15% 10% 0% 30%;
+  width: 40%;
+  padding-bottom: 10%;
+}
+
+.EPD {
+  width: 90%;
+  margin-left: 5%;
+}
+.EPD u {
+  text-decoration: underline #99E2D0;
+  text-decoration-thickness: 20%;
+  text-underline-offset: 30%;
+}
+.EPD .info {
+  cursor: pointer;
+  background-color: rgb(255, 255, 255);
+  width: 97%;
+  height: 10%;
+  display: flex;
+  margin-top: 4%;
+  box-shadow: rgb(216, 216, 216) 0px 5px 5px;
+  box-shadow: rgb(216, 216, 216) 0px 5px 5px;
+  border-radius: 20px 20px 20px 20px;
+  overflow: hidden;
+  opacity: 0;
+  animation: entrer_menu 2s;
+  animation-fill-mode: forwards;
+}
+.EPD .info .P2 {
+  width: 0%;
+  background-color: #99E2D0;
+  border-radius: 0px 20px 20px 0px;
+  transition: width 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.EPD .info .P2 .valide .fa-solid {
+  color: white;
+  font-size: 170%;
+}
+.EPD .info:hover {
+  box-shadow: rgb(145, 145, 145) 0px 10px 10px;
+}
+.EPD .info:hover .P1 {
+  border-radius: 20px 0px 0px 20px;
+  width: 85%;
+}
+.EPD .info:hover .P2 {
+  width: 15%;
+  display: block;
+  animation: progress 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.EPD .info:hover .P2 .fa-solid {
+  transform: rotate(-1turn);
+  transition: transform 0.8s;
+}
+.EPD .info .P1 {
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-radius: 20px 20px 20px 20px;
+  background-color: white;
+  padding: 2%;
+  transition: width 0.5s;
+}
+.EPD .info .nom {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  direction: ltr;
+  width: 90%;
+}
+.EPD .info .nom h2 {
+  margin: 5px;
+  margin-left: 10px;
+  font-size: medium;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  direction: ltr;
+}
+.EPD .info .nom p {
+  margin: 5px;
+  margin-left: 10px;
+  text-decoration: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  direction: ltr;
+}
+.EPD .info .nom .prix {
+  width: 10%;
+}
+.EPD .I2 {
+  animation-delay: 250ms;
+}
+.EPD .I3 {
+  animation-delay: 500ms;
+}
+.EPD .I4 {
+  animation-delay: 750ms;
+}
+.EPD .I5 {
+  animation-delay: 1000ms;
+}
+.EPD .I6 {
+  animation-delay: 1250ms;
+}
+.EPD .I7 {
+  animation-delay: 1500ms;
+}
+.EPD .I8 {
+  animation-delay: 1750ms;
+}
+.EPD .I9 {
+  animation-delay: 2000ms;
+}
+.EPD .I10 {
+  animation-delay: 2250ms;
+}
+
+.fa-heart {
+  margin: 10px;
+  color: gainsboro;
+  cursor: pointer;
+}
+.fa-heart:hover {
+  animation-name: coeur;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+.fa-heart:active {
+  background-color: rgb(147, 86, 220);
+  font-size: small;
+  margin-right: 15px;
+}
+
+header .retour {
+  position: absolute;
+  top: -1%;
+  margin: 5%;
+  margin-right: 5%;
+}
+header .retour button {
+  border: none;
+  background-color: white;
+  cursor: pointer;
+}
+header .logo {
+  display: block;
+  width: 50%;
+  height: 2%;
+  margin: 10px auto;
+}
+
+#restaurants {
+  width: auto;
+  height: 53.9%;
+  background-color: rgb(246, 246, 246);
+  padding: 20px 0px 20px 0px;
+  padding-bottom: 10%;
+}
+#restaurants .restau {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+footer {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.76);
+  color: white;
+  height: 9.09%;
+  padding: 20px 0px 20px 0px;
+  color: white;
+}
+footer h2 {
+  padding-left: 5%;
+  margin-top: 0px;
+}
+footer h2 img {
+  width: 30%;
+  color: white;
+}
+footer p {
+  padding-left: 5%;
+  font-weight: 500;
+}
+footer p .fa-solid {
+  margin-right: 3%;
+}
+
+#fonctionnement {
+  height: 19.5%;
+  width: auto;
+  padding: 20px 0px 20px 0px;
+  padding-bottom: 20px 0px 20px 0px20px;
+}
+
+.loc {
+  background-color: rgb(236, 236, 236);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: rgb(102, 102, 102) 0px 9px 7px -10px inset;
+  font-weight: 700;
+  width: auto;
+  height: 1.9%;
+}
+
+.ploc {
+  margin: 5%;
+  font-weight: 600;
+}
+
+#explor {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(246, 246, 246);
+  width: auto;
+  height: 13%;
+  padding: 20px 0px 20px 0px;
+  padding-bottom: 20px 0px 20px 0px20px;
+}
+
+.explor-res {
+  font-weight: 700;
+  font-size: 160%;
+  margin: 30px 0px 5px;
+}
+
+.explor {
+  width: 80%;
+  text-align: center;
+}
+
+.explor-dec {
+  font-size: 110%;
+  margin: 5px 0px;
+}
+
+.explor-bouton {
+  width: 60%;
+}
+
+a {
+  text-decoration: none;
+}
+
+.PR {
+  width: 100%;
+  margin-bottom: 0%;
+}
+
+#container {
+  background: rgb(246, 246, 246);
+  border-radius: 30px 30px 0px 0px;
+  margin-top: -20%;
+  position: relative;
+  padding-bottom: 0%;
+}
+#container h1 {
+  display: flex;
+  justify-content: space-between;
+  padding: 5%;
+  margin: 0%;
+  font-family: sh;
+  font-weight: 500;
+  width: 90%;
+}
+#container h1 .fa-solid {
+  opacity: 40%;
+}
+#container h1 .fa-solid:hover {
+  opacity: 100%;
+  color: rgb(147, 86, 220);
+}
+#container .menu {
+  width: 100%;
+  margin-left: 0%;
+}
+#container .menu p {
+  opacity: 80%;
+  color: black;
+}
+
+/*# sourceMappingURL=style.css.map */

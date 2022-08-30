@@ -1,0 +1,22 @@
+.boutonex {
+    color: white;
+    text-align: center;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 6%;
+    padding-bottom: 6%;
+    box-shadow: $ombres;
+    font-weight: 500;
+    background: $degrade;
+    border-radius: 30px;
+    text-decoration: none;
+
+
+    cursor: pointer;
+    transform: scale(1);
+    transition-property: transform;
+    transition-duration: 500ms;
+    &:hover {
+        transform: scale(1.15);
+    }
+}

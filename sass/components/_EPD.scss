@@ -1,0 +1,96 @@
+.EPD
+{
+  
+    width: 90%;
+    margin-left: 5%;
+    
+    u{text-decoration: underline $couleur-vert; text-decoration-thickness: 20%; text-underline-offset: 30%;}
+   
+    .info
+    {
+        cursor: pointer;
+        background-color: rgb(255, 255, 255);
+        width: 97%;
+        height: 10%;
+        display: flex;
+        margin-top: 4%;
+        box-shadow: $ombres;
+        box-shadow: rgb(216 216 216) 0px 5px 5px;
+        border-radius: 20px 20px 20px 20px;
+        overflow: hidden;
+        opacity: 0;
+        animation: entrer_menu 2s;
+        animation-fill-mode: forwards;
+
+
+        .P2
+        {
+            width: 0%;
+            background-color: $couleur-vert;  
+            border-radius: 0px 20px 20px 0px;
+            transition: width 0.5s;
+            @include centrer;
+            
+            .valide{ .fa-solid {color: white; font-size: 170%;}}
+        }
+
+                &:hover
+                {
+                    box-shadow: $ombres-survol;
+                    .P1{border-radius: 20px 0px 0px 20px; width: 85%;}
+                    .P2
+                    { 
+                        width: 15%;
+                        display: block;animation: progress 0.5s;
+                        @include centrer;
+                        .fa-solid{transform: rotate(-1turn);
+                        transition: transform 0.8s;}
+                        
+                    }
+                    
+                
+
+                }
+
+        
+
+        .P1{
+            width: 95%;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            border-radius: 20px 20px 20px 20px;
+            background-color: white;
+            padding: 2%;
+            transition: width 0.5s;
+
+            
+        }
+    .nom
+    {      
+        @include textreduc;
+        width: 90%;  
+        
+    h2{margin: $mar-text; margin-left: $mar-text-left;font-size: medium;  @include textreduc}
+    p{margin: $mar-text; margin-left: $mar-text-left; text-decoration: none; @include textreduc }
+    .prix{width: 10%}
+    }
+    
+
+    
+}
+
+.I2{animation-delay: 250ms;}
+.I3{animation-delay: 500ms;}
+.I4{animation-delay: 750ms;}
+.I5{animation-delay: 1000ms;}
+.I6{animation-delay: 1250ms;}
+.I7{animation-delay: 1500ms;}
+.I8{animation-delay: 1750ms;}
+.I9{animation-delay: 2000ms;}
+.I10{animation-delay: 2250ms;}
+    
+}
+
+
+

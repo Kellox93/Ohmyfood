@@ -1,0 +1,22 @@
+.fa-heart
+{
+
+margin: $mar-text-left; 
+color: gainsboro;
+
+cursor: pointer;
+
+
+    &:hover {
+   animation-name: coeur;
+   animation-duration: 2s;
+   animation-fill-mode: forwards;
+   
+   
+    
+    }
+
+    &:active{background-color: $couleur-violet; font-size: small; margin-right: $mar-text-left + 5;}
+
+    
+}

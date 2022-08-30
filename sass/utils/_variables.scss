@@ -1,0 +1,53 @@
+$mar-text: 5px ; 
+$mar-text-left: 10px ; 
+$couleur-vert: #99E2D0;
+$ombres: rgb(216, 216, 216) 0px 5px 5px;
+$ombres-survol:  rgb(145, 145, 145) 0px 10px 10px;
+$lepad: 20px 0px 20px 0px;
+$couleur-violet: rgba(147, 86, 220);
+$degrade: linear-gradient(to right bottom, rgb(255, 121, 218), rgb(147, 86, 220));
+$rond: 20px;
+$app : 2s;
+
+@mixin textreduc{
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+    direction: ltr;}
+
+@mixin centrer{display: flex; justify-content: center; align-items: center;}
+
+@font-face {
+    font-family: "sh";
+    src: url("polices/Shrikhand-Regular.otf");}
+
+@keyframes entrer_menu
+{
+    0% {opacity: 0;}
+    100%{opacity: 1; }
+}
+ @keyframes coeur{
+
+    0% {color: gainsboro;}
+    100% {color: $couleur-violet;}
+ }
+
+
+ @keyframes progress{
+
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+        }
+ }
+@keyframes progresso{
+
+        0% {width: 100%;}
+
+            100% {
+                width: 85%;
+                }
+
+}
