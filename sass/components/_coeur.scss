@@ -2,14 +2,14 @@
 {
 
 margin: $mar-text-left; 
-color: gainsboro;
+
 
 cursor: pointer;
 
 
     &:hover {
    animation-name: coeur;
-   animation-duration: 2s;
+   animation-duration: 1s;
    animation-fill-mode: forwards;
    
    
